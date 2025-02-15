@@ -1,5 +1,68 @@
-h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@font-face {
+    font-family: "NexaRustSans";
+    src: url(Fonts/NexaRustSans-Black.otf);
 }
+
+body {
+    font-family: "NexaRustSans";
+    background-color: #E1E8E6; 
+  }
+
+#landing-wrapper {
+    display: flex;
+  }
+
+  .landing-section {
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vw;
+    color: black;
+    text-shadow: 4px 4px #AFD4D7;
+    border-radius: 20px;
+    margin: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
+    transition: transform .2s;
+    filter: blur(5px);
+  }
+
+  .header {
+    transition: transform .25s;
+    transform: translate(0px, -14vh);
+  }
+  
+  #landing-right {
+    flex: 0 0 48%;
+    height: 98vh;
+    background-image: url("Landing-Music.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  #landing-left {
+    flex: 1;
+    height: 98vh;
+    background-image: url("Landing-Programming.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .landing-section:hover {
+    transform: scale(1.013);
+    filter: blur(0px);
+  }
+
+  .landing-section:hover > .header {
+    transform: translate(0px, 0px);
+  }
+
+  @media screen and (max-width: 900px) {
+    #landing-right {
+        flex: 0 0 100%;
+    }
+
+    #landing-left {
+        flex: 0 0 100%;
+    }
+  }
