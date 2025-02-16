@@ -92,7 +92,7 @@ body {
     }
 
     .landing-section:hover {
-        transform: scale(1.009);
+        transform: scale(1);
         filter: blur(0px);
       }
 
